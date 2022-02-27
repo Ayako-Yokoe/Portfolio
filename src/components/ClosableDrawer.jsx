@@ -3,23 +3,12 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import { Link } from 'react-scroll'
 
 
 const Container = styled.div``
 
-
 const ClosableDrawer = (props) => {
-    const selectMenu = (event, path) => {
-        // navigate(path)
-        props.onClose(event, false)
-    }
-
-    const menus = [
-        {func: selectMenu, label: 'Home', id: 'home', value: '/register'},
-        {func: selectMenu, label: 'About', id: 'about', value: '/login'},
-        {func: selectMenu, label: 'Project', id: 'project', value: '/cart'},
-        {func: selectMenu, label: 'Contact', id: 'contact', value: '/cart'}
-    ]
 
   return (
     <Container>
@@ -34,12 +23,59 @@ const ClosableDrawer = (props) => {
             onClose={(e) => props.onClose(e, false)}
             onKeyDown={(e) => props.onClose(e, false)}
         >
+
         <List>
-            {menus.map(menu => (
-                <ListItem button key={menu.id} onClick={(e) => menu.func(e, menu.value)}>
-                    <ListItemText primary={menu.label} />
-                </ListItem>
-            ))}
+            <ListItem button>
+                <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={(event) => props.onClose(event, false)}
+                >
+                    <ListItemText primary='Home' />
+                </Link>
+            </ListItem>
+
+            <ListItem button>
+                <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={(event) => props.onClose(event, false)}
+                >
+                    <ListItemText primary='About' />
+                </Link>
+            </ListItem>
+
+            <ListItem button>
+                <Link
+                    activeClass="active"
+                    to="project"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={(event) => props.onClose(event, false)}
+                >
+                    <ListItemText primary='Project' />
+                </Link>
+            </ListItem>
+
+            <ListItem button>
+                <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={(event) => props.onClose(event, false)}
+                >
+                    <ListItemText primary='Contact' />
+                </Link>
+            </ListItem>
         </List>
         </div>
         </Drawer>
