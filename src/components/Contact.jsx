@@ -76,7 +76,7 @@ const Input = styled.input`
     outline: none;
     border: none;
     border-radius: 3px;
-    box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow:  3px 3px 15px rgba(0, 0, 0, 0.1) inset;
     background-color: rgba(156, 100, 255, 0.4);
 `
 
@@ -89,7 +89,7 @@ const Textarea = styled.textarea`
     outline: none;
     border: none;
     border-radius: 3px;
-    box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow:  3px 3px 15px rgba(0, 0, 0, 0.1) inset;
     background-color: rgba(156, 100, 255, 0.4);
 `
 
