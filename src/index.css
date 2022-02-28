@@ -16,8 +16,10 @@ html {
 }
 body {
   font-family: 'Nunito', sans-serif;
-  background-color: #fff;
-  color: #0d0d0d;
+  /* background-color: #fff;
+  color: #0d0d0d; */
+  /* background-color: #000;
+  color: #fff; */
 }
 img {
   width: 100%;
@@ -26,3 +28,11 @@ img {
 a {
   text-decoration: none;
 }
+/* 
+[data-theme='dark'] {
+  background-color: #000;
+  color: #fff;
+  --base-color: rgb(156, 10, 240);
+  --base-color-lighter-1: rgb(156, 50, 255);
+  --base-color-lighter-2: rgb(156, 100, 255);
+} */

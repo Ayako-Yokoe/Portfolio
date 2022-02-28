@@ -1,76 +1,23 @@
-import React from 'react'
+import React, { useContext, useState, useCallback } from 'react'
 import { Link } from 'react-scroll'
-import styled from 'styled-components'
-import MenuIcon from '@mui/icons-material/Menu';
-import { useState, useCallback } from 'react';
 import ClosableDrawer from './ClosableDrawer';
-import responsive from '../responsive'
+import DarkModeToggle from 'react-dark-mode-toggle'
+import { ThemeColorContext } from '../ThemeColorContext';
+import MenuIcon from '@mui/icons-material/Menu';
+import {
+    Container,
+    Wrapper,
+    Left,
+    Logo,
+    Right,
+    NavItem,
+    Hamburgermenu
+} from './Navbar.styles'
 
-
-
-
-const Container = styled.div`
-    /* height: 10vh;
-    background-color: pink; */
-`
-const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px;
-    position: fixed;
-    z-index: 30;
-    height: 10vh;
-    background-color: pink;
-`
-const Left = styled.div`
-    align-items: center;
-`
-const Logo = styled.h1`
-    margin: 1rem;
-    cursor: pointer;
-
-    font-size: 1rem;
-`
-
-const Right = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-`
-
-const NavItem = styled.li`
-    display: none;
-
-    @media only screen and ${responsive.device.m}{
-        list-style: none;
-        display: block;
-        padding: 1rem;
-        font-size: 1.2em;
-        color: var(--base-color-lighter-1);
-        font-weight: 700;
-        letter-spacing: 2px;
-        transition: 0.5s ease;
-
-        &:hover {
-            cursor: pointer;
-            color: var(--base-color-lighter-2);
-        }
-    }
-`
-const Hamburgermenu = styled.div`
-    visibility: visible;
-    margin-right: 1rem;
-    display: block;
-
-    @media only screen and ${responsive.device.m}{
-        visibility: hidden;
-    }
-`
 
 const Navbar = () => {
     const [sideBarOpen, setSideBarOpen] = useState(false)
+    const { turnOn, setTurnOn } = useContext(ThemeColorContext)
 
     const handleDrawerToggle = useCallback((event, isOpen) => {
         if(event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')){
@@ -136,7 +83,7 @@ const Navbar = () => {
                 <NavItem>Contact</NavItem>
             </Link>
 
-            {/* <i class="fa-regular fa-moon change-theme theme-list" id="theme-btn"></i> */}
+            <DarkModeToggle onChange={setTurnOn} checked={turnOn} size={60} />
             
             <Hamburgermenu onClick={(event) => handleDrawerToggle(event, true)} >
                 <MenuIcon />
