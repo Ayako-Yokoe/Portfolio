@@ -4,7 +4,7 @@ import responsive from '../responsive'
 export const Container = styled.div`
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 `
 export const Wrapper = styled.div`
     width: 75%;

@@ -86,6 +86,14 @@ export const Message1 = styled.span`
 export const Message2 = styled.span`
     color: var(--base-color-lighter-2);
 `
+export const SnsWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+
+    @media only screen and ${responsive.device.s}{
+        justify-content: flex-start;
+    }
+`
 export const Sns = styled.a`
     font-size: 1.2rem;
     margin-right: 1.0rem;
@@ -158,6 +166,7 @@ export const SubmitBtn = styled.button`
     color: #fff;
     font-weight: 700;
     letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
 
     @media only screen and ${responsive.device.xl}{
         font-size: 1.0rem;
@@ -172,5 +181,6 @@ export const SubmitBtn = styled.button`
 
     &:hover {
         cursor: pointer;
+        background-color: var(--base-color-lighter-2);
     }
 `

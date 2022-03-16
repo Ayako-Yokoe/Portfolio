@@ -12,6 +12,8 @@ import {
     ProjectLink
 } from './Project.styles'
 
+import { projects } from '../data'
+
 
 const Project = () => {
   return (
@@ -19,25 +21,18 @@ const Project = () => {
           <Heading>Projects</Heading>
           <SubTitle>subtitle or some explanation</SubTitle>
           <ProjectGrid>
-              <Projects>
+            {projects.map(project => (
+                <Projects key={project.id}>
                   <Figure>
-                      <Image src="assets/meritt-thomas-Ao09kk2ovB0-unsplash.jpg" />
+                      <Image src={project.image} alt="project image" />
                       <Figcaption>
-                          <FigcaptionHeading>description of the project description of the project description of the project</FigcaptionHeading>
-                          <ProjectLink><span>Visit Website >></span></ProjectLink>
+                          <FigcaptionHeading>{project.caption}</FigcaptionHeading>
+                          <ProjectLink href={project.link} target="_blank"><span>Visit Website >></span></ProjectLink>
                       </Figcaption>
                   </Figure>
               </Projects>
 
-              <Projects>
-                  <Figure>
-                      <Image src="assets/vicky-ng--qQlfYB7pqM-unsplash.jpg" />
-                      <Figcaption>
-                          <FigcaptionHeading>description of the project description of the project description of the project</FigcaptionHeading>
-                          <ProjectLink><span>Visit Website >></span></ProjectLink>
-                      </Figcaption>
-                  </Figure>
-              </Projects>
+            ))}
           </ProjectGrid>
       </Container>
   )

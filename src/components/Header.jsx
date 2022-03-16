@@ -12,7 +12,7 @@ const Header = () => {
   return (
       <Container id='home'>
         <Wrapper>
-            <Name>My name is namae</Name>
+            <Name>My name is name</Name>
             <Title>Front-End Developer</Title>
             <Paragraph>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
