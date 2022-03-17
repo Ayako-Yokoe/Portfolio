@@ -8,7 +8,7 @@ const mainColors = [
 ]
 
 const ThemeColorProvider = ({ children }) => {
-    const [turnOn, setTurnOn] = useState(false)
+    const [turnOn, setTurnOn] = useState(true)
     const [mainColor, setMainColor] = useState(mainColors[0])
 
     useEffect(() => {

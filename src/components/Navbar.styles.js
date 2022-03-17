@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
     position: fixed;
     z-index: 30;
     height: 8vh;  
+    background-color: ${prop => prop.bg === 'dark' ? '#000' : "#fff"};
 `
 export const Left = styled.div`
     align-items: center;

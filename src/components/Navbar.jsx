@@ -1,4 +1,4 @@
-import React, { useContext, useState, useCallback } from 'react'
+import React, { useContext, useState, useCallback, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import ClosableDrawer from './ClosableDrawer';
 import DarkModeToggle from 'react-dark-mode-toggle'
@@ -17,6 +17,7 @@ import {
 
 const Navbar = () => {
     const [sideBarOpen, setSideBarOpen] = useState(false)
+    const [bg, setBg] = useState('')
     const { turnOn, setTurnOn } = useContext(ThemeColorContext)
 
     const handleDrawerToggle = useCallback((event, isOpen) => {
@@ -26,10 +27,15 @@ const Navbar = () => {
         setSideBarOpen(isOpen)
     }, [setSideBarOpen])
 
+    useEffect(() => {
+        turnOn ? setBg('dark') : setBg('light')
+    }, [turnOn, setTurnOn])
+
+
   return (
     <>
     <Container>
-      <Wrapper>
+      <Wrapper bg={bg}>
         <Left>
             <Link
                 activeClass="active"
