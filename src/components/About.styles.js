@@ -146,3 +146,59 @@ export const TechTitle = styled.span`
         font-size: 1.7rem;
     }
 `
+
+
+export const TechList = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* @media only screen and ${responsive.device.s}{
+        font-size: 0.6rem;
+        margin-right: 0.5rem;
+    }
+    @media only screen and ${responsive.device.m}{
+        font-size: 0.8rem;
+        margin-right: 1.2rem;
+    }
+    @media only screen and ${responsive.device.l}{
+        font-size: 0.9rem;
+        margin-right: 1.2rem;
+    }
+    @media only screen and ${responsive.device.xl}{
+        font-size: 1.0rem;
+        margin-right: 1.3rem;
+    }
+    @media only screen and ${responsive.device.xxl}{
+        font-size: 1.7rem;
+    } */
+`
+export const Tech = styled.button`
+    padding: 0.5rem 0.8rem;
+    margin: 0.2rem 0.8rem 0 0;
+    background-color: var(--base-color-lighter-2);
+    color: #fff;
+    border: 1px solid var(--base-color-lighter-2);
+    border-radius: 10px;
+
+    /* @media only screen and ${responsive.device.s}{
+        font-size: 0.6rem;
+        margin-right: 0.5rem;
+    }
+    @media only screen and ${responsive.device.m}{
+        font-size: 0.8rem;
+        margin-right: 1.2rem;
+    }
+    @media only screen and ${responsive.device.l}{
+        font-size: 0.9rem;
+        margin-right: 1.2rem;
+    }
+    @media only screen and ${responsive.device.xl}{
+        font-size: 1.0rem;
+        margin-right: 1.3rem;
+    }
+    @media only screen and ${responsive.device.xxl}{
+        font-size: 1.7rem;
+    } */
+`
