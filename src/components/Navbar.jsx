@@ -85,6 +85,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
+                style={{ marginRight: "1rem" }}
             >
                 <NavItem>Contact</NavItem>
             </Link>

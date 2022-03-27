@@ -13,6 +13,9 @@ export const Container = styled.div`
         align-items: center;
         height: 90vh;
     }
+    @media only screen and ${responsive.device.l}{
+        margin: 0 2.5rem;
+    }
 `
 export const Heading = styled.h2`
     text-align: center;

@@ -55,23 +55,23 @@ export const Title = styled.h3`
     }
 `
 export const Paragraph = styled.p`
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     font-weight: 500;
 
     @media only screen and ${responsive.device.s}{
-        font-size: 1.0rem;
+        font-size: 0.7rem;
     }
     @media only screen and ${responsive.device.m}{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     @media only screen and ${responsive.device.l}{
-        font-size: 2.0rem;
+        font-size: 1.7rem;
     }
     @media only screen and ${responsive.device.xl}{
-        font-size: 3.0rem;
+        font-size: 2.7rem;
     }
     @media only screen and ${responsive.device.xxl}{
-        font-size: 4.5rem;
+        font-size: 4.2rem;
         padding-top: 1rem;
     }
 `

@@ -12,13 +12,11 @@ const Header = () => {
   return (
       <Container id='home'>
         <Wrapper>
-            <Name>My name is name</Name>
+            <Name>My name is Ayako Yokoe</Name>
             <Title>Front-End Developer</Title>
             <Paragraph>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                {/* Est ipsa animi ab, earum accusantium, quasi aspernatur, */}
+                Living in Vancouver, Canada
             </Paragraph>
-
         </Wrapper> 
     </Container>
   )

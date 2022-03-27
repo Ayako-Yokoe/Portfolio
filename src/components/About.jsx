@@ -21,10 +21,12 @@ const About = () => {
                   <Image src="assets/mame-shiba copy.jpg" alt="" /> 
               </Left>
               <Right>
-                <AboutMe>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Est ipsa animi ab, earum accusantium, quasi aspernatur, 
-                    quae nobis eum at repellat possimus qui neque excepturi 
-                    debitis voluptatum amet ratione ex!
+                <AboutMe>
+                  I've always been passionate about learning and growing in tech. 
+                  As a former English language teacher, I bring transferable skills 
+                  to my tech careers, such as focus, patience, and communication. 
+                  I've dedicated myself to leveraging my front-end development skills 
+                  to become a valuable member of a professional software development team.
                 </AboutMe>
                 <TechList>
                   <Tech>HTML</Tech>
