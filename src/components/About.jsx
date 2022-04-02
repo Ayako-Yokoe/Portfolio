@@ -14,7 +14,7 @@ import {
 
 const About = () => {
   return (
-    <Container id="about">
+    <Container id="about" data-aos="fade-up">
           <Heading>About</Heading>
           <Wrapper>
               <Left>

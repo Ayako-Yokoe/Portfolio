@@ -50,7 +50,7 @@ const Contact = () => {
       };
 
   return (
-      <Container id="contact">
+      <Container id="contact" data-aos="fade-up">
           <Heading>Contact Me</Heading>
           <Wrapper>
               <Left>
