@@ -24,7 +24,7 @@ const About = () => {
                 <AboutMe>
                   I've always been passionate about learning and growing in tech. 
                   As a former English language teacher, I bring transferable skills 
-                  to my tech careers, such as focus, patience, and communication. 
+                  to my tech careers.
                   I've dedicated myself to leveraging my front-end development skills 
                   to become a valuable member of a professional software development team.
                 </AboutMe>

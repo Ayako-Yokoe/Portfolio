@@ -14,8 +14,6 @@ export const Container = styled.div`
     }
 `
 export const Heading = styled.h2`
-    padding-top: 2rem;
-    margin: 1.5rem;
     font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
@@ -67,6 +65,10 @@ export const Wrapper = styled.div`
         justify-content: center;
         flex-wrap: wrap;
     }
+`
+export const ProjectLink = styled.a`
+    text-decoration: none;
+    color: #000;
 `
 
 

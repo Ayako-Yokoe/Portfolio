@@ -44,7 +44,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
             >  
-                <Logo>logo</Logo>
+                <Logo>AY</Logo>
             </Link>
         </Left>
 

@@ -21,6 +21,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import styled from 'styled-components'
 import responsive from '../responsive'
 
@@ -30,7 +31,10 @@ const Project = () => {
 
     <Container id="project" data-aos="fade-up">
       <Heading>Projects</Heading>
-      <SubTitle>subtitle or some explanation</SubTitle>
+      <SubTitle>
+        Here are some of my recent projects.<br/>
+        I’d appreciate it if you’d take a look at them.
+      </SubTitle>
       <Wrapper>
       {projects.map(project => (
         <Card key={project.id} 
@@ -48,7 +52,7 @@ const Project = () => {
           alt="project image"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '1rem'}}>
+          <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '1rem' }}>
             {project.title}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.7rem'}}>
@@ -56,8 +60,16 @@ const Project = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
+          <Button size="small">
+            <ProjectLink href={project.gitHubLink} target="_blank">
+              <GitHubIcon />
+            </ProjectLink>
+          </Button>
+          <Button size="small">
+            <ProjectLink href={project.deployedLink} target="_blank">
+              * Netlify
+            </ProjectLink>
+          </Button>
         </CardActions>
         </>
 

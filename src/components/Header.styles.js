@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 export const Name = styled.h1`
     font-size: 1.3rem;
     font-weight: 700;
+    padding-bottom: 0.3rem;
     color: var(--base-color);
 
     @media only screen and ${responsive.device.s}{
@@ -37,6 +38,7 @@ export const Name = styled.h1`
 export const Title = styled.h3`
     font-size: 1.0rem;
     font-weight: 700;
+    padding-bottom: 0.3rem;
 
     @media only screen and ${responsive.device.s}{
         font-size: 1.5rem;
@@ -56,22 +58,22 @@ export const Title = styled.h3`
 `
 export const Paragraph = styled.p`
     font-size: 0.5rem;
-    font-weight: 500;
+    font-weight: 400;
 
     @media only screen and ${responsive.device.s}{
         font-size: 0.7rem;
     }
     @media only screen and ${responsive.device.m}{
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
     @media only screen and ${responsive.device.l}{
-        font-size: 1.7rem;
+        font-size: 1.2rem;
     }
     @media only screen and ${responsive.device.xl}{
-        font-size: 2.7rem;
+        font-size: 1.6rem;
     }
     @media only screen and ${responsive.device.xxl}{
-        font-size: 4.2rem;
+        font-size: 2rem;
         padding-top: 1rem;
     }
 `

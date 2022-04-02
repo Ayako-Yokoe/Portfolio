@@ -18,10 +18,27 @@ export const Left = styled.div`
     align-items: center;
 `
 export const Logo = styled.h1`
+    font-family: 'Train One', cursive;
     margin: 1rem;
     cursor: pointer;
+    font-size: 0.8rem;
 
-    font-size: 1rem;
+    @media only screen and ${responsive.device.s}{
+        font-size: 0.9rem;
+    }
+    @media only screen and ${responsive.device.m}{
+        font-size: 1.0rem;
+    }
+    @media only screen and ${responsive.device.l}{
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+    }
+    @media only screen and ${responsive.device.xl}{
+        font-size: 1.4rem;
+    }
+    @media only screen and ${responsive.device.xxl}{
+        font-size: 2.0rem;
+    }
 `
 export const Right = styled.div`
     display: flex;
@@ -45,6 +62,23 @@ export const NavItem = styled.li`
             cursor: pointer;
             color: var(--base-color-lighter-2);
         }
+    }
+
+    @media only screen and ${responsive.device.s}{
+        font-size: 0.9rem;
+    }
+    @media only screen and ${responsive.device.m}{
+        font-size: 1.0rem;
+    }
+    @media only screen and ${responsive.device.l}{
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+    }
+    @media only screen and ${responsive.device.xl}{
+        font-size: 1.4rem;
+    }
+    @media only screen and ${responsive.device.xxl}{
+        font-size: 2.0rem;
     }
 `
 export const Hamburgermenu = styled.div`
