@@ -56,8 +56,8 @@ const Contact = () => {
               <Left>
                   <LeftHeading>I <Message2>keep</Message2> creating <Message1>new projects</Message1> <br/>as I <Message2>learn</Message2>, and <Message1>updating</Message1> this portfolio. <br/>Please come <Message1>check often</Message1>. <br/><Message2>Thank</Message2> you.</LeftHeading>
                   <SnsWrapper>
-                      <Sns href="#" target="_blank"><LinkedInIcon />linkedin</Sns>
-                      <Sns href="#" target="_blank"><GitHubIcon />github</Sns>
+                      <Sns href="#" target="_blank"><LinkedInIcon style={{ marginBottom: '-5px' }} />linkedin</Sns>
+                      <Sns href="#" target="_blank"><GitHubIcon style={{ marginBottom: '-5px' }} />github</Sns>
                   </SnsWrapper>
               </Left>
               <Right>

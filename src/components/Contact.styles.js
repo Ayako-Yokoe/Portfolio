@@ -97,7 +97,6 @@ export const SnsWrapper = styled.div`
 export const Sns = styled.a`
     font-size: 1.2rem;
     margin-right: 1.0rem;
-    margin-bottom: -5px;
     color: var(--base-color-lighter-1);
 
     &:hover {
