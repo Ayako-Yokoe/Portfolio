@@ -28,7 +28,7 @@ const Navbar = () => {
     }, [setSideBarOpen])
 
     useEffect(() => {
-        turnOn ? setBg('dark') : setBg('light')
+        turnOn ? setBg('light') : setBg('dark')
     }, [turnOn, setTurnOn])
 
 

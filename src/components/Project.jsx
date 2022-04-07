@@ -41,6 +41,7 @@ const Project = () => {
           sx={{ 
             maxWidth: {xs: 345, sm: 200, md: 300, xl: 345} , 
             margin: {xs: '1rem 0 1rem 0', sm: '0.5rem' },
+            backgroundColor: "#f8f8f8"
             // background: 'linear-gradient(to right bottom, rgba(0,0,0,0.9) rgba(0,0,0,0,0.9))', hover: 'linear-gradient(rgba(0,0,0,0)) '
           }}
         >
@@ -48,6 +49,7 @@ const Project = () => {
         <CardMedia
           component="img"
           height="140"
+          sx={{ borderBottom: "2px solid #707070" }}
           image={project.image}
           alt="project image"
         />
@@ -59,13 +61,20 @@ const Project = () => {
           {project.caption}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">
+        <CardActions sx={{ "position": "relative", "overflow": "hidden" }}>
+          <Button size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
             <ProjectLink href={project.gitHubLink} target="_blank">
-              <GitHubIcon />
+              <GitHubIcon 
+                sx={{
+                  transform: "scale(1)",
+                  transition: "0.5s ease-in-out",
+                  ":hover": {
+                    transform: "scale(1.1)"
+                  }
+                 }} />
             </ProjectLink>
           </Button>
-          <Button size="small">
+          <Button size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
             <ProjectLink href={project.deployedLink} target="_blank">
               * Netlify
             </ProjectLink>

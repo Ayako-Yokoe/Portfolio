@@ -15,7 +15,7 @@ const Header = () => {
             <Name>Hi, I'm Ayako Yokoe</Name>
             <Title>Front-End Developer</Title>
             <Paragraph>
-                I'm enjoying creating applications thinking of <br/>
+                I enjoy creating applications, thinking of <br/>
                 what apps people would need and how they would use them<br/>
                 to make their lives better. 
             </Paragraph>
