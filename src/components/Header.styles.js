@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import responsive from '../responsive'
+import styled from 'styled-components';
+import responsive from '../responsive';
 
 export const Container = styled.div`
     position: relative;

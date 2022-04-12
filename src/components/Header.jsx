@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import {
     Container,
     Wrapper,
     Name,
     Title,
     Paragraph
-} from './Header.styles'
+} from './Header.styles';
 
 
 const Header = () => {

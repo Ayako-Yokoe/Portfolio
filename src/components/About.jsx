@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
     Container,
     Heading,
@@ -9,7 +9,7 @@ import {
     AboutMe,
     TechList,
     Tech
-} from './About.styles'
+} from './About.styles';
 
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
           <Heading>About</Heading>
           <Wrapper>
               <Left>
-                  <Image src="assets/mame-shiba copy.jpg" alt="" /> 
+                  <Image src="assets/photo.jpg" alt="profile picture" /> 
               </Left>
               <Right>
                 <AboutMe>

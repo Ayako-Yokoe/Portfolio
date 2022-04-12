@@ -1,9 +1,9 @@
-import React, { useContext, useState, useCallback, useEffect } from 'react'
-import { Link } from 'react-scroll'
-import ClosableDrawer from './ClosableDrawer';
-import DarkModeToggle from 'react-dark-mode-toggle'
-import { ThemeColorContext } from '../ThemeColorContext';
+import React, { useContext, useState, useCallback, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import DarkModeToggle from 'react-dark-mode-toggle';
 import MenuIcon from '@mui/icons-material/Menu';
+import ClosableDrawer from './ClosableDrawer';
+import { ThemeColorContext } from '../ThemeColorContext';
 import {
     Container,
     Wrapper,
@@ -12,7 +12,7 @@ import {
     Right,
     NavItem,
     Hamburgermenu
-} from './Navbar.styles'
+} from './Navbar.styles';
 
 
 const Navbar = () => {

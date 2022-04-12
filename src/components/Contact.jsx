@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import emailjs from 'emailjs-com';
-//import { Form, Input, TextArea, Button } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
 import {
     Container,
@@ -20,7 +19,7 @@ import {
     Input,
     Textarea,
     SubmitBtn 
-} from './Contact.styles'
+} from './Contact.styles';
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
@@ -56,13 +55,12 @@ const Contact = () => {
               <Left>
                   <LeftHeading>I <Message2>keep</Message2> creating <Message1>new projects</Message1> <br/>as I <Message2>learn</Message2>, and <Message1>updating</Message1> this portfolio. <br/>Please come <Message1>check often</Message1>. <br/><Message2>Thank</Message2> you.</LeftHeading>
                   <SnsWrapper>
-                      <Sns href="#" target="_blank"><LinkedInIcon style={{ marginBottom: '-5px' }} />linkedin</Sns>
-                      <Sns href="#" target="_blank"><GitHubIcon style={{ marginBottom: '-5px' }} />github</Sns>
+                      <Sns href="https://www.linkedin.com/in/ayakoyokoe/" target="_blank"><LinkedInIcon style={{ marginBottom: '-5px' }} />linkedin</Sns>
+                      <Sns href="https://github.com/Ayako-Yokoe?tab=repositories" target="_blank"><GitHubIcon style={{ marginBottom: '-5px' }} />github</Sns>
                   </SnsWrapper>
               </Left>
               <Right>
                   <Form onSubmit={handleOnSubmit}>
-                    {/* <Form.Field */}
                     <Label htmlFor="name">Name</Label><br/>
                     <Input
                     id='form-input-control-name'
@@ -71,7 +69,6 @@ const Contact = () => {
                     name='from_name'
                     required
                     />
-                    {/* <Form.Field */}
                     <Label htmlFor="email">Email</Label><br/>
                     <Input
                     id='form-input-control-email'
@@ -80,16 +77,12 @@ const Contact = () => {
                     name='reply_to'
                     required
                     />
-                    {/* <Form.Field */}
                     <Label htmlFor="message">Message</Label><br/>
                     <Textarea
-                    id='form-textarea-control-opinion'
-                    //control={TextArea}
                     label='Message'
                     name='message'
                     required
                     />
-                    {/* <Button type='submit'>Send</Button> */}
                     <SubmitBtn  type='submit'>Send</SubmitBtn >
                 </Form>
               </Right>

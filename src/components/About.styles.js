@@ -1,6 +1,5 @@
-import styled from 'styled-components'
-import responsive from '../responsive'
-
+import styled from 'styled-components';
+import responsive from '../responsive';
 
 export const Container = styled.div`
     display: block;
@@ -59,7 +58,7 @@ export const Image = styled.img`
     width: 30%;
     height: 30%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10px;
 
     @media only screen and ${responsive.device.s}{
         width: 60%;

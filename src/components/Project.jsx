@@ -1,20 +1,4 @@
-import React from 'react'
-import {
-    Container,
-    Wrapper,
-    Heading,
-    SubTitle,
-    ProjectGrid,
-    Projects,
-    Figure,
-    Image,
-    Figcaption,
-    FigcaptionHeading,
-    ProjectLink
-} from './Project.styles'
-
-import { projects } from '../data'
-
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -22,8 +6,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import styled from 'styled-components'
-import responsive from '../responsive'
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { projects } from '../data';
+import {
+    Container,
+    Wrapper,
+    Heading,
+    SubTitle,
+    ProjectLink
+} from './Project.styles';
 
 
 const Project = () => {
@@ -42,7 +33,6 @@ const Project = () => {
             maxWidth: {xs: 345, sm: 200, md: 300, xl: 345} , 
             margin: {xs: '1rem 0 1rem 0', sm: '0.5rem' },
             backgroundColor: "#f8f8f8"
-            // background: 'linear-gradient(to right bottom, rgba(0,0,0,0.9) rgba(0,0,0,0,0.9))', hover: 'linear-gradient(rgba(0,0,0,0)) '
           }}
         >
         <>
@@ -61,7 +51,7 @@ const Project = () => {
           {project.caption}
           </Typography>
         </CardContent>
-        <CardActions sx={{ "position": "relative", "overflow": "hidden" }}>
+        <CardActions sx={{ position: "relative", overflow: "hidden", justifyContent: "end" }}>
           <Button size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
             <ProjectLink href={project.gitHubLink} target="_blank">
               <GitHubIcon 
@@ -71,12 +61,21 @@ const Project = () => {
                   ":hover": {
                     transform: "scale(1.1)"
                   }
-                 }} />
+                 }} 
+                />
             </ProjectLink>
           </Button>
           <Button size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
             <ProjectLink href={project.deployedLink} target="_blank">
-              * Netlify
+              <OpenInNewIcon
+                sx={{
+                  transform: "scale(1)",
+                  transition: "0.5s ease-in-out",
+                  ":hover": {
+                    transform: "scale(1.1)"
+                  }
+                }}
+              />
             </ProjectLink>
           </Button>
         </CardActions>
@@ -90,24 +89,5 @@ const Project = () => {
   )
 }
 
-
-      // <Container id="project">
-      //     <Heading>Projects</Heading>
-      //     
-      //     <ProjectGrid>
-      //       {projects.map(project => (
-      //           <Projects key={project.id}>
-      //             <Figure>
-      //                 <Image src={project.image} alt="project image" />
-      //                 <Figcaption>
-      //                     <FigcaptionHeading>{project.caption}</FigcaptionHeading>
-      //                     <ProjectLink href={project.link} target="_blank"><span>Visit Website >></span></ProjectLink>
-      //                 </Figcaption>
-      //             </Figure>
-      //         </Projects>
-
-      //       ))}
-      //     </ProjectGrid>
-      // </Container>
 
 export default Project

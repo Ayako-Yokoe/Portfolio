@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import AboutContainer from "./container/AboutContainer";
 import ContactContainer from "./container/ContactContainer";
 import HeaderContainer from "./container/HeaderContainer";
 import ProjectContainer from "./container/ProjectContainer";
-import { ThemeColorContext } from './ThemeColorContext'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { ThemeColorContext } from './ThemeColorContext';
 
 
 function App() {
