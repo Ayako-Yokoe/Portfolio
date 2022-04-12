@@ -31,7 +31,7 @@ const Project = () => {
         <Card key={project.id} 
           sx={{ 
             maxWidth: {xs: 345, sm: 200, md: 300, xl: 345} , 
-            margin: {xs: '1rem 0 1rem 0', sm: '0.5rem' },
+            margin: {xs: '1rem 0 1rem 0', sm: '0.5rem', lg: '1rem' },
             backgroundColor: "#f8f8f8"
           }}
         >

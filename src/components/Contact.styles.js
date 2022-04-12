@@ -53,7 +53,11 @@ export const Left = styled.div`
 
     @media only screen and ${responsive.device.s}{
         flex: 1;
-        margin: 1rem 2rem 1rem 3rem;
+        margin: 1rem 0 1rem 3rem;
+    }
+    @media only screen and ${responsive.device.xl}{
+        flex: 1;
+        margin: 1rem 0 1rem 8rem;
     }
 `
 export const LeftHeading = styled.h3`
@@ -109,11 +113,16 @@ export const Right = styled.div`
 
     @media only screen and ${responsive.device.s}{
         flex: 1;
-        margin: 1rem 3rem 1rem 2rem;
+        margin: 1rem 3rem 1rem 1rem;
     }
+
 `
 export const Form = styled.form`
     width: 100%;
+
+    @media only screen and ${responsive.device.xl}{
+        width: 80%;
+    }
 `
 export const Label = styled.label`
     letter-spacing: 1.5px;
