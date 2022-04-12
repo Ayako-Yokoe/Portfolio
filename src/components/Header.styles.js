@@ -35,7 +35,7 @@ export const Name = styled.h1`
         font-size: 6rem;
     }
 `
-export const Title = styled.h3`
+export const Title = styled.h2`
     font-size: 1.0rem;
     font-weight: 700;
     padding-bottom: 0.3rem;

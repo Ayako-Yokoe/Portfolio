@@ -52,7 +52,7 @@ const Project = () => {
           </Typography>
         </CardContent>
         <CardActions sx={{ position: "relative", overflow: "hidden", justifyContent: "end" }}>
-          <Button size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
+          <Button aria-label="github icon" size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
             <ProjectLink href={project.gitHubLink} target="_blank">
               <GitHubIcon 
                 sx={{
@@ -65,7 +65,7 @@ const Project = () => {
                 />
             </ProjectLink>
           </Button>
-          <Button size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
+          <Button aria-label="project link icon" size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
             <ProjectLink href={project.deployedLink} target="_blank">
               <OpenInNewIcon
                 sx={{

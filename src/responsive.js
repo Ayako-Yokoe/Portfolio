@@ -16,4 +16,5 @@ const device = {
 }
 
 
-export default {size, device}
+const responsive = { size, device }
+export default responsive

@@ -61,7 +61,8 @@ const Contact = () => {
               </Left>
               <Right>
                   <Form onSubmit={handleOnSubmit}>
-                    <Label htmlFor="name">Name</Label><br/>
+                    <Label htmlFor="name">
+                      Name
                     <Input
                     id='form-input-control-name'
                     control={Input}
@@ -69,7 +70,9 @@ const Contact = () => {
                     name='from_name'
                     required
                     />
-                    <Label htmlFor="email">Email</Label><br/>
+                    </Label>
+                    <Label htmlFor="email">
+                      Email
                     <Input
                     id='form-input-control-email'
                     control={Input}
@@ -77,12 +80,15 @@ const Contact = () => {
                     name='reply_to'
                     required
                     />
-                    <Label htmlFor="message">Message</Label><br/>
+                    </Label>
+                    <Label htmlFor="message">
+                      Message
                     <Textarea
                     label='Message'
                     name='message'
                     required
                     />
+                    </Label>
                     <SubmitBtn  type='submit'>Send</SubmitBtn >
                 </Form>
               </Right>
