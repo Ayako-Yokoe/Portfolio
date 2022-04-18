@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { keyframes } from '@mui/system';
 import { projects } from '../data';
 import {
     Container,
@@ -17,9 +18,30 @@ import {
 } from './Project.styles';
 
 
-const Project = () => {
-  return (
+const swing = keyframes`
+    10% {
+        transform: translateY(5px);
+    }
+    30% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    65% {
+        transform: translateY(-3px);
+    }
+    85% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+`
 
+const Project = () => {
+
+  return (
     <Container id="project" data-aos="fade-up">
       <Heading>Projects</Heading>
       <SubTitle>
@@ -52,14 +74,13 @@ const Project = () => {
           </Typography>
         </CardContent>
         <CardActions sx={{ position: "relative", overflow: "hidden", justifyContent: "end" }}>
-          <Button aria-label="github icon" size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}>
+          <Button  aria-label="github icon" size="small" sx={{ ":hover": { backgroundColor: "transparent" }}}  >
             <ProjectLink href={project.gitHubLink} target="_blank">
               <GitHubIcon 
                 sx={{
-                  transform: "scale(1)",
-                  transition: "0.5s ease-in-out",
                   ":hover": {
-                    transform: "scale(1.1)"
+                    animation: `${swing} 1s ease`,
+                    animationIterationCount: 1
                   }
                  }} 
                 />
@@ -69,12 +90,11 @@ const Project = () => {
             <ProjectLink href={project.deployedLink} target="_blank">
               <OpenInNewIcon
                 sx={{
-                  transform: "scale(1)",
-                  transition: "0.5s ease-in-out",
                   ":hover": {
-                    transform: "scale(1.1)"
+                    animation: `${swing} 1s ease`,
+                    animationIterationCount: 1
                   }
-                }}
+                 }} 
               />
             </ProjectLink>
           </Button>

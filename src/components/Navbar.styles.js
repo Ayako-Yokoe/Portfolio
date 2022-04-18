@@ -56,11 +56,28 @@ export const NavItem = styled.li`
         color: var(--base-color-lighter-1);
         font-weight: 700;
         letter-spacing: 2px;
-        transition: 0.5s ease;
+        border: none;
+        position: relative;
 
         &:hover {
             cursor: pointer;
-            color: var(--base-color-lighter-2);
+            border: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 1px;
+            left: 50%;
+            bottom: 0;
+            background-color: var(--base-color-lighter-2);
+            transition: all ease-in .2s;
+        }
+
+        &:hover::after {
+            width: 80%;
+            left: 10px;
         }
     }
 
