@@ -31,7 +31,7 @@ const USER_ID = process.env.REACT_APP_USER_ID;
 
 
 const Contact = () => {
-  const { ref, inView, entry } = useInView()
+  const { ref, inView } = useInView()
 
   const handleOnSubmit = (e) => {
       e.preventDefault();

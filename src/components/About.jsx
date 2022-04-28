@@ -15,7 +15,7 @@ import {
 
 
 const About = () => {
-  const { ref, inView, entry } = useInView()
+  const { ref, inView } = useInView()
 
   return (
     <Container id="about" data-aos="fade-up">

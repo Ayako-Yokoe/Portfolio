@@ -45,7 +45,7 @@ const swing = keyframes`
 `
 
 const Project = () => {
-  const { ref, inView, entry } = useInView()
+  const { ref, inView } = useInView()
 
   return (
     <Container id="project" data-aos="fade-up">
