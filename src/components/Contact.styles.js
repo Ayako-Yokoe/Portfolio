@@ -3,21 +3,22 @@ import responsive from '../responsive';
 
 export const Container = styled.div`
     height: auto;
+    background-color: rgba(156, 100, 255, 0.4);
 
     @media only screen and ${responsive.device.s}{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 70vh;
     }
 `
 export const Heading = styled.h2`
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    padding-top: 2rem;
     text-align: center;
+    font-size: 1.3rem;
+    padding: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
 
     @media only screen and ${responsive.device.s}{
         padding-top: 2rem;
@@ -36,6 +37,21 @@ export const Heading = styled.h2`
     @media only screen and ${responsive.device.xxl}{
         font-size: 2.6rem;
         margin-bottom: 1.3rem;
+    }
+`
+export const Title = styled.span`
+    position: relative;
+    display: inline-block;
+    animation: ${props => props.animation === 'animation' ? 'pop 2s' : 'none 0'};
+    animation-delay: ${props =>  `calc(.1s * ${props.delay})`};
+
+    @keyframes pop {
+        0%,40%,100% {
+            transform: translateY(0)
+        }
+        20% {
+            transform: translateY(-8px)
+        }
     }
 `
 export const Wrapper = styled.div`
@@ -101,11 +117,14 @@ export const SnsWrapper = styled.div`
 export const Sns = styled.a`
     font-size: 1.2rem;
     margin-right: 1.0rem;
-    color: var(--base-color-lighter-1);
+    color: #202020;
 
     &:hover {
         cursor: pointer;
-        color: var(--base-color-lighter-2);
+        transition: all .25s ease-in;
+        color: var(--base-color);
+        text-shadow: 0 5px 5px rgba(255,255,255,0.7);
+        transform: translateY(-3px);
     }
 `
 export const Right = styled.div`
@@ -138,11 +157,8 @@ export const Input = styled.input`
     font-size: 1.1rem;
     font-family: 'Nunito', sans-serif;
     outline: none;
-    border: none;
     border-radius: 3px;
-    box-shadow:  3px 3px 15px rgba(0, 0, 0, 0.1) inset;
-    background-color: rgba(156, 100, 255, 0.9);
-    color: #fff;
+    border: .5px solid var(--base-color-lighter-1);
 
     @media only screen and ${responsive.device.l}{
         font-size: 1.5rem;
@@ -155,11 +171,8 @@ export const Textarea = styled.textarea`
     font-size: 1.1rem;
     font-family: 'Nunito', sans-serif;
     outline: none;
-    border: none;
     border-radius: 3px;
-    box-shadow:  3px 3px 15px rgba(0, 0, 0, 0.1) inset;
-    background-color: rgba(156, 100, 255, 0.9);
-    color: #fff;
+    border: .5px solid var(--base-color-lighter-1);
 
     @media only screen and ${responsive.device.l}{
         font-size: 1.5rem;
@@ -167,15 +180,16 @@ export const Textarea = styled.textarea`
 `
 export const SubmitBtn = styled.button`
     font-family: 'Nunito', sans-serif;
-    padding: 0.5rem 0.7rem;
-    margin-top: 0.3rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--base-color-lighter-1);
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 2px;
-    transition: 0.2s all ease-in-out;
+    padding: 0.7rem 1.2rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: var(--base-color);
+    font-weight: 500;
+    letter-spacing: 3px;
+    border: 1px solid var(--base-color);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 
     @media only screen and ${responsive.device.xl}{
         font-size: 1.0rem;
@@ -189,7 +203,25 @@ export const SubmitBtn = styled.button`
     }
 
     &:hover {
-        cursor: pointer;
-        background-color: var(--base-color-lighter-2);
+        background-color: #fff;
+        box-shadow: 0 5px 5px rgba(156, 100, 255, 0.5);
     }
+`
+export const SubmitAnimation = styled.div`
+    transform: rotate(150deg);
+    width: 20%;
+    height: 270%;
+    left: -100px;
+    top: -30px;
+    background-color: #ffe863;
+    position: absolute;
+    transition: all .5s ease-Out;
+
+    ${SubmitBtn}:hover & {
+        left: 100px;
+    }
+`
+export const SubmitText = styled.span`
+    position: relative;
+    transition: all .45s ease-Out;
 `

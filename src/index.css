@@ -5,6 +5,7 @@
   --base-color: rgb(156, 10, 240);
   --base-color-lighter-1: rgb(156, 50, 255);
   --base-color-lighter-2: rgb(156, 100, 255);
+  --yellow: #ffe863;
 }
 
 * {

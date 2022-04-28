@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AboutContainer from "./container/AboutContainer";
 import ContactContainer from "./container/ContactContainer";
 import HeaderContainer from "./container/HeaderContainer";
 import ProjectContainer from "./container/ProjectContainer";
-import { ThemeColorContext } from './ThemeColorContext';
 
 
 function App() {
-  const { mainColor } = useContext(ThemeColorContext)
   AOS.init({
     offset: 200,
     duration: 600,
@@ -18,7 +16,7 @@ function App() {
   });
 
   return (
-    <div style ={{ backgroundColor: mainColor.backgroundColor, color: mainColor.color }}>
+   <div>
       <HeaderContainer />
       <AboutContainer />
       <ProjectContainer />

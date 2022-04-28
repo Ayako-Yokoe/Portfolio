@@ -3,9 +3,11 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
+import { useInView } from 'react-intersection-observer';
 import {
     Container,
     Heading,
+    Title,
     Wrapper,
     Left,
     LeftHeading,
@@ -18,7 +20,9 @@ import {
     Label,
     Input,
     Textarea,
-    SubmitBtn 
+    SubmitBtn,
+    SubmitAnimation,
+    SubmitText
 } from './Contact.styles';
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -27,30 +31,43 @@ const USER_ID = process.env.REACT_APP_USER_ID;
 
 
 const Contact = () => {
+  const { ref, inView, entry } = useInView()
 
-    const handleOnSubmit = (e) => {
-        e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-          .then((result) => {
-            console.log(result.text);
-            Swal.fire({
-              icon: 'success',
-              title:'Message Sent Successfully'
-            })
-          }, (error) => {
-            console.log(error.text);
-            Swal.fire({
-              icon: 'error',
-              title: 'Something went wrong',
-              text: error.text,
-            })
-          });
-        e.target.reset()
-      };
+  const handleOnSubmit = (e) => {
+      e.preventDefault();
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        .then((result) => {
+          console.log(result.text);
+          Swal.fire({
+            icon: 'success',
+            title:'Message Sent Successfully'
+          })
+        }, (error) => {
+          console.log(error.text);
+          Swal.fire({
+            icon: 'error',
+            title: 'Something went wrong',
+            text: error.text,
+          })
+        });
+      e.target.reset()
+    };
 
   return (
       <Container id="contact" data-aos="fade-up">
-          <Heading>Contact Me</Heading>
+          <Heading ref={ref}>
+            <Title animation={inView ? 'animation' : 'none'} delay="1">C</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="2">o</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="3">n</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="4">t</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="5">a</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="6">c</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="7">t</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="8">&nbsp;</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="9">M</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="10">e</Title>
+          </Heading>
+
           <Wrapper>
               <Left>
                   <LeftHeading>I <Message2>keep</Message2> creating <Message1>new projects</Message1> <br/>as I <Message2>learn</Message2>, and <Message1>updating</Message1> this portfolio. <br/>Please come <Message1>check often</Message1>. <br/><Message2>Thank</Message2> you.</LeftHeading>
@@ -89,7 +106,10 @@ const Contact = () => {
                     required
                     />
                     </Label>
-                    <SubmitBtn  type='submit'>Send</SubmitBtn >
+                    <SubmitBtn type='submit'>
+                      <SubmitAnimation></SubmitAnimation>
+                      <SubmitText>SEND</SubmitText>
+                    </SubmitBtn>
                 </Form>
               </Right>
           </Wrapper>

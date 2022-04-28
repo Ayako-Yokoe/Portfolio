@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import {
     Container,
     Heading,
@@ -8,14 +9,24 @@ import {
     Right,
     AboutMe,
     TechList,
-    Tech
+    Tech,
+    Title
 } from './About.styles';
 
 
 const About = () => {
+  const { ref, inView, entry } = useInView()
+
   return (
     <Container id="about" data-aos="fade-up">
-          <Heading>About</Heading>
+          <Heading ref={ref}>
+            <Title animation={inView ? 'animation' : 'none'} delay="1">A</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="2">b</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="3">o</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="4">u</Title>
+            <Title animation={inView ? 'animation' : 'none'} delay="5">t</Title>
+          </Heading>
+
           <Wrapper>
               <Left>
                   <Image src="assets/photo.jpg" alt="profile picture" /> 

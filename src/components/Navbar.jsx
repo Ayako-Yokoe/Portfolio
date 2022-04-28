@@ -1,9 +1,7 @@
-import React, { useContext, useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link } from 'react-scroll';
-import DarkModeToggle from 'react-dark-mode-toggle';
 import MenuIcon from '@mui/icons-material/Menu';
 import ClosableDrawer from './ClosableDrawer';
-import { ThemeColorContext } from '../ThemeColorContext';
 import {
     Container,
     Wrapper,
@@ -17,8 +15,6 @@ import {
 
 const Navbar = () => {
     const [sideBarOpen, setSideBarOpen] = useState(false)
-    const [bg, setBg] = useState('')
-    const { turnOn, setTurnOn } = useContext(ThemeColorContext)
 
     const handleDrawerToggle = useCallback((event, isOpen) => {
         if(event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')){
@@ -27,15 +23,10 @@ const Navbar = () => {
         setSideBarOpen(isOpen)
     }, [setSideBarOpen])
 
-    useEffect(() => {
-        turnOn ? setBg('light') : setBg('dark')
-    }, [turnOn, setTurnOn])
-
-
   return (
     <>
     <Container>
-      <Wrapper bg={bg}>
+      <Wrapper>
         <Left>
             <Link
                 activeClass="active"
@@ -90,8 +81,6 @@ const Navbar = () => {
                 <NavItem>Contact</NavItem>
             </Link>
 
-            <DarkModeToggle onChange={setTurnOn} checked={turnOn} size={60} />
-            
             <Hamburgermenu onClick={(event) => handleDrawerToggle(event, true)} >
                 <MenuIcon />
             </Hamburgermenu>

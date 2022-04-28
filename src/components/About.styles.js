@@ -20,6 +20,8 @@ export const Heading = styled.h2`
     text-align: center;
     font-size: 1.3rem;
     padding: 2rem;
+    letter-spacing: 3px;
+    position: relative;
 
     @media only screen and ${responsive.device.s}{
         font-size: 1.5rem;
@@ -35,6 +37,21 @@ export const Heading = styled.h2`
     }
     @media only screen and ${responsive.device.xxl}{
         font-size: 2.6rem;
+    }
+`
+export const Title = styled.span`
+    position: relative;
+    display: inline-block;
+    animation: ${props => props.animation === 'animation' ? 'pop 1s' : 'none 0'};
+    animation-delay: ${props =>  `calc(.1s * ${props.delay})`};
+
+    @keyframes pop {
+        0%,40%,100% {
+            transform: translateY(0)
+        }
+        20% {
+            transform: translateY(-8px)
+        }
     }
 `
 export const Wrapper = styled.div`
@@ -58,7 +75,8 @@ export const Image = styled.img`
     width: 30%;
     height: 30%;
     object-fit: cover;
-    border-radius: 10px;
+    outline: 0.5px solid var(--base-color-lighter-1);
+    outline-offset: 10px;
 
     @media only screen and ${responsive.device.s}{
         width: 60%;
@@ -118,7 +136,7 @@ export const Tech = styled.button`
     background-color: var(--base-color-lighter-2);
     color: #fff;
     border: 1px solid var(--base-color-lighter-2);
-    border-radius: 10px;
+    border-radius: 5px;
 
     @media only screen and ${responsive.device.s}{
         font-size: 0.8rem;
