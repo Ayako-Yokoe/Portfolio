@@ -77,7 +77,7 @@ const Project = () => {
             </Desc>
             <LinkContainer>
               <LinkButton >
-                  <ProjectLink href="google.com" target="_blank">
+                  <ProjectLink href={project.gitHubLink} target="_blank">
                     <GitHubIcon 
                       sx={{
                         ":hover": {
