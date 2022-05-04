@@ -44,6 +44,7 @@ const About = () => {
                   <Tech>CSS</Tech>
                   <Tech>JavaScript</Tech>
                   <Tech>TypeScript</Tech>
+                  <Tech>PHP</Tech>
                   <Tech>JQuery</Tech>
                   <Tech>ReactJS</Tech>
                   <Tech>React Router</Tech>
