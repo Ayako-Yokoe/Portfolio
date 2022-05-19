@@ -189,6 +189,9 @@ export const ProjectCaption = styled.p`
     margin: 1rem 0;
     line-height: 1.4rem;
 
+    @media only screen and ${responsive.device.l}{
+        line-height: 1.8rem;
+    }
     @media only screen and ${responsive.device.xxl}{
         line-height: 2rem;
     }

@@ -111,10 +111,12 @@ export const AboutMe = styled.p`
     @media only screen and ${responsive.device.l}{
         font-size: 1.2rem;
         margin-bottom: 3rem;
+        line-height: 1.8rem;
     }
     @media only screen and ${responsive.device.xl}{
         font-size: 1.4rem;
         margin-bottom: 3rem;
+        line-height: 2rem;
     }
     @media only screen and ${responsive.device.xxl}{
         font-size: 2.0rem;

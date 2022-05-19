@@ -71,6 +71,7 @@ export const Paragraph = styled.p`
     }
     @media only screen and ${responsive.device.xl}{
         font-size: 1.6rem;
+        line-height: 2.2rem;
     }
     @media only screen and ${responsive.device.xxl}{
         font-size: 2rem;
