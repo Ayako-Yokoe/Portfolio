@@ -36,7 +36,7 @@ const About = () => {
                   I've always been passionate about learning and growing in tech. 
                   As a former English language teacher, I bring transferable skills 
                   to my tech careers.
-                  I've dedicated myself to leveraging my front-end development skills 
+                  I've dedicated myself to leveraging my full-stack development skills 
                   to become a valuable member of a professional software development team.
                 </AboutMe>
                 <TechList>
@@ -56,6 +56,7 @@ const About = () => {
                   <Tech>Bootstrap</Tech>
                   <Tech>MongoDB</Tech>
                   <Tech>Firebase</Tech>
+                  <Tech>MySQL</Tech>
                 </TechList>
               </Right>
           </Wrapper>

@@ -23,7 +23,7 @@ const Header = () => {
       <Container id='home'>
         <Wrapper>
             <Name>Hi, I'm Ayako Yokoe</Name>
-            <Title>Front-End Developer</Title>
+            <Title>Full Stack Developer</Title>
             <Paragraph>
                 I enjoy creating applications, thinking of <br/>
                 what apps people would need and how they would use them<br/>
