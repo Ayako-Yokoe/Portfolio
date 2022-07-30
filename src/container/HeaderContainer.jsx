@@ -1,6 +1,6 @@
-import React from 'react';
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+import React from "react";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 const HeaderContainer = () => {
   return (
@@ -8,7 +8,7 @@ const HeaderContainer = () => {
       <Navbar />
       <Header />
     </div>
-  )
-}
+  );
+};
 
-export default HeaderContainer
+export default HeaderContainer;

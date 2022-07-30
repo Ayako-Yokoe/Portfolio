@@ -1,13 +1,12 @@
-import React from 'react';
-import Project from '../components/Project';
-
+import React from "react";
+import Project from "../components/Project";
 
 const ProjectContainer = () => {
   return (
     <div>
-      <Project name='project' />
+      <Project name="project" />
     </div>
-  )
-}
+  );
+};
 
-export default ProjectContainer
+export default ProjectContainer;
