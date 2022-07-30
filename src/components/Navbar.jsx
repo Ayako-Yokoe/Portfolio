@@ -75,7 +75,7 @@ const Navbar = () => {
               <NavItem>Project</NavItem>
             </Link>
 
-            <a href="https://dev.to/ayako_yk" target="_blank">
+            <a href="https://dev.to/ayako_yk" target="_blank" rel="noreferrer">
               <NavItem>Blog</NavItem>
             </a>
 
