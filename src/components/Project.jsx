@@ -1,9 +1,9 @@
-import React from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { keyframes } from "@mui/system";
-import { useInView } from "react-intersection-observer";
-import { projects } from "../data";
+import React from "react"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
+import { keyframes } from "@mui/system"
+import { useInView } from "react-intersection-observer"
+import { projects } from "../data"
 import {
   Container,
   Wrapper,
@@ -21,7 +21,9 @@ import {
   LinkContainer,
   LinkButton,
   Overlay,
-} from "./Project.styles";
+  OverlayTitle,
+  LinkTitle,
+} from "./Project.styles"
 
 const swing = keyframes`
     10% {
@@ -42,10 +44,10 @@ const swing = keyframes`
     100% {
         transform: translateY(-2px);
     }
-`;
+`
 
 const Project = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView()
 
   return (
     <Container id="project" data-aos="fade-up">
@@ -97,34 +99,42 @@ const Project = () => {
                   <ProjectLink href={project.gitHubLink} target="_blank">
                     <GitHubIcon
                       sx={{
+                        fontSize: { lg: "2.5rem", xl: "3.5rem" },
+                        margin: { lg: "1.5rem 0 1.5rem 1.5rem" },
                         ":hover": {
                           animation: `${swing} 1s ease`,
                           animationIterationCount: 1,
                         },
                       }}
                     />
+                    <LinkTitle>github</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
                 <LinkButton>
                   <ProjectLink href={project.deployedLink} target="_blank">
                     <OpenInNewIcon
                       sx={{
+                        fontSize: { lg: "2.5rem", xl: "3.5rem" },
+                        margin: { lg: "1.5rem 0 1.5rem 1.5rem" },
                         ":hover": {
                           animation: `${swing} 1s ease`,
                           animationIterationCount: 1,
                         },
                       }}
                     />
+                    <LinkTitle>website</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
               </LinkContainer>
             </Detail>
-            <Overlay></Overlay>
+            {/* <Overlay>
+              <OverlayTitle>{project.overlay}</OverlayTitle>
+            </Overlay> */}
           </ProjectCard>
         ))}
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

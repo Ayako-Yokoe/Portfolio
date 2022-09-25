@@ -1,26 +1,33 @@
-import styled from "styled-components";
-import responsive from "../responsive";
+import styled from "styled-components"
+import responsive from "../responsive"
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-`;
+  height: 100dvh;
+
+  @media only screen and ${responsive.device.m} {
+    height: 100vh;
+  }
+`
 export const Wrapper = styled.div`
   width: 75%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`;
+`
 export const Name = styled.h1`
-  font-size: 1.3rem;
+  //font-size: 1.3rem;
+  font-size: 1.85rem;
   font-weight: 700;
   padding-bottom: 0.3rem;
   color: var(--base-color);
 
   @media only screen and ${responsive.device.s} {
     font-size: 2rem;
+    padding-bottom: 0.4rem;
   }
   @media only screen and ${responsive.device.m} {
     font-size: 3rem;
@@ -34,55 +41,59 @@ export const Name = styled.h1`
   @media only screen and ${responsive.device.xxl} {
     font-size: 6rem;
   }
-`;
+`
 export const Title = styled.h2`
-  font-size: 1rem;
+  //font-size: 1rem;
+  font-size: 1.75rem;
   font-weight: 700;
   padding-bottom: 0.3rem;
 
   @media only screen and ${responsive.device.s} {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
   @media only screen and ${responsive.device.m} {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
   }
   @media only screen and ${responsive.device.l} {
-    font-size: 3rem;
+    font-size: 3.4rem;
   }
   @media only screen and ${responsive.device.xl} {
-    font-size: 4rem;
+    font-size: 4.4rem;
   }
   @media only screen and ${responsive.device.xxl} {
-    font-size: 5.5rem;
+    font-size: 5.9rem;
   }
-`;
+`
 export const Paragraph = styled.p`
-  font-size: 0.5rem;
+  //font-size: 0.5rem;
+  font-size: 0.9rem;
   font-weight: 400;
+  padding-top: 0.4rem;
+  line-height: 1.4;
 
   @media only screen and ${responsive.device.s} {
     font-size: 0.7rem;
   }
   @media only screen and ${responsive.device.m} {
     font-size: 1rem;
+    padding-top: 0.8rem;
   }
   @media only screen and ${responsive.device.l} {
     font-size: 1.2rem;
   }
   @media only screen and ${responsive.device.xl} {
     font-size: 1.6rem;
-    line-height: 2.2rem;
   }
   @media only screen and ${responsive.device.xxl} {
     font-size: 2rem;
     padding-top: 1rem;
   }
-`;
+`
 export const Button = styled.div`
   display: inline-block;
   text-decoration: none;
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
   cursor: pointer;
 
   @media only screen and ${responsive.device.s} {
@@ -90,6 +101,7 @@ export const Button = styled.div`
   }
   @media only screen and ${responsive.device.m} {
     font-size: 3rem;
+    margin-top: 40px;
   }
   @media only screen and ${responsive.device.l} {
     font-size: 3.5rem;
@@ -100,14 +112,14 @@ export const Button = styled.div`
   @media only screen and ${responsive.device.xxl} {
     font-size: 6rem;
   }
-`;
+`
 export const Bottom = styled.div`
   position: absolute;
   left: 7px;
   top: 7px;
   width: 100%;
   height: 100%;
-  background-color: #ffe863;
+  background-color: var(--yellow);
   display: block;
   transition: all 0.5s ease-out;
 
@@ -121,7 +133,7 @@ export const Bottom = styled.div`
     top: 0;
     background-color: #fff;
   }
-`;
+`
 export const Top = styled.div`
   position: relative;
   left: 0;
@@ -147,7 +159,7 @@ export const Top = styled.div`
   @media only screen and ${responsive.device.xxl} {
     padding: 32px 42px 30px 42px;
   }
-`;
+`
 export const Label = styled.div`
   font-weight: 600;
   color: var(--base-color);
@@ -171,11 +183,11 @@ export const Label = styled.div`
   @media only screen and ${responsive.device.xxl} {
     font-size: 18px;
   }
-`;
+`
 export const ButtonBorder = styled.div`
   position: absolute;
   transition: all 0.25s ease-out;
-`;
+`
 export const BorderTop = styled.div`
   left: -2px;
   top: -2px;
@@ -185,7 +197,7 @@ export const BorderTop = styled.div`
   ${Button}:hover & {
     width: calc(100% + 2px);
   }
-`;
+`
 export const BorderRight = styled.div`
   right: -2px;
   top: -2px;
@@ -195,7 +207,7 @@ export const BorderRight = styled.div`
   ${Button}:hover & {
     height: calc(100% + 2px);
   }
-`;
+`
 export const BorderBottom = styled.div`
   right: -2px;
   bottom: -2px;
@@ -205,7 +217,7 @@ export const BorderBottom = styled.div`
   ${Button}:hover & {
     width: calc(100% + 2px);
   }
-`;
+`
 export const BorderLeft = styled.div`
   left: -2px;
   bottom: -2px;
@@ -215,4 +227,4 @@ export const BorderLeft = styled.div`
   ${Button}:hover & {
     height: calc(100% + 2px);
   }
-`;
+`

@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-scroll";
+import React from "react"
+import { Link } from "react-scroll"
 import {
   Container,
   Wrapper,
@@ -15,7 +15,7 @@ import {
   BorderRight,
   BorderBottom,
   BorderLeft,
-} from "./Header.styles";
+} from "./Header.styles"
 
 const Header = () => {
   return (
@@ -52,7 +52,7 @@ const Header = () => {
         </Button>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

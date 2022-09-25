@@ -1,5 +1,5 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react"
+import { useInView } from "react-intersection-observer"
 import {
   Container,
   Heading,
@@ -11,10 +11,10 @@ import {
   TechList,
   Tech,
   Title,
-} from "./About.styles";
+} from "./About.styles"
 
 const About = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView()
 
   return (
     <Container id="about" data-aos="fade-up">
@@ -71,7 +71,7 @@ const About = () => {
         </Right>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default About;
+export default About

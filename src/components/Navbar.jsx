@@ -1,7 +1,7 @@
-import React, { useState, useCallback } from "react";
-import { Link } from "react-scroll";
-import MenuIcon from "@mui/icons-material/Menu";
-import ClosableDrawer from "./ClosableDrawer";
+import React, { useState, useCallback } from "react"
+import { Link } from "react-scroll"
+import MenuIcon from "@mui/icons-material/Menu"
+import ClosableDrawer from "./ClosableDrawer"
 import {
   Container,
   Wrapper,
@@ -10,10 +10,11 @@ import {
   Right,
   NavItem,
   Hamburgermenu,
-} from "./Navbar.styles";
+} from "./Navbar.styles"
 
 const Navbar = () => {
-  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [sideBarOpen, setSideBarOpen] = useState(false)
+  const [shadow, setShadow] = useState(false)
 
   const handleDrawerToggle = useCallback(
     (event, isOpen) => {
@@ -21,17 +22,27 @@ const Navbar = () => {
         event.type === "keydown" &&
         (event.key === "Tab" || event.key === "Shift")
       ) {
-        return;
+        return
       }
-      setSideBarOpen(isOpen);
+      setSideBarOpen(isOpen)
     },
     [setSideBarOpen]
-  );
+  )
+
+  const handleShadow = () => {
+    if (window.scrollY >= 70) {
+      setShadow(true)
+    } else {
+      setShadow(false)
+    }
+  }
+
+  window.addEventListener("scroll", handleShadow)
 
   return (
     <>
       <Container>
-        <Wrapper>
+        <Wrapper shadow={shadow}>
           <Left>
             <Link
               activeClass="active"
@@ -57,22 +68,22 @@ const Navbar = () => {
 
             <Link
               activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              <NavItem>About</NavItem>
-            </Link>
-
-            <Link
-              activeClass="active"
               to="project"
               spy={true}
               smooth={true}
               duration={500}
             >
               <NavItem>Project</NavItem>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <NavItem>About</NavItem>
             </Link>
 
             <a href="https://dev.to/ayako_yk" target="_blank" rel="noreferrer">
@@ -85,20 +96,19 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              style={{ marginRight: "1rem" }}
             >
               <NavItem>Contact</NavItem>
             </Link>
 
             <Hamburgermenu onClick={(event) => handleDrawerToggle(event, true)}>
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: "2.2rem" }} />
             </Hamburgermenu>
           </Right>
         </Wrapper>
         <ClosableDrawer open={sideBarOpen} onClose={handleDrawerToggle} />
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

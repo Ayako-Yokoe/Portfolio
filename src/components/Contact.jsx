@@ -1,9 +1,9 @@
-import React from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import emailjs from "emailjs-com";
-import Swal from "sweetalert2";
-import { useInView } from "react-intersection-observer";
+import React from "react"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import emailjs from "emailjs-com"
+import Swal from "sweetalert2"
+import { useInView } from "react-intersection-observer"
 import {
   Container,
   Heading,
@@ -15,6 +15,8 @@ import {
   Message2,
   SnsWrapper,
   Sns,
+  LinkedInTitle,
+  GitHubTitle,
   Right,
   Form,
   Label,
@@ -23,36 +25,37 @@ import {
   SubmitBtn,
   SubmitAnimation,
   SubmitText,
-} from "./Contact.styles";
+  SubmitButton,
+} from "./Contact.styles"
 
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const USER_ID = process.env.REACT_APP_USER_ID;
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
+const USER_ID = process.env.REACT_APP_USER_ID
 
 const Contact = () => {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView()
 
   const handleOnSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
-        console.log(result.text);
+        console.log(result.text)
         Swal.fire({
           icon: "success",
           title: "Message Sent Successfully",
-        });
+        })
       },
       (error) => {
-        console.log(error.text);
+        console.log(error.text)
         Swal.fire({
           icon: "error",
           title: "Something went wrong",
           text: error.text,
-        });
+        })
       }
-    );
-    e.target.reset();
-  };
+    )
+    e.target.reset()
+  }
 
   return (
     <Container id="contact" data-aos="fade-up">
@@ -92,24 +95,36 @@ const Contact = () => {
       <Wrapper>
         <Left>
           <LeftHeading>
-            I <Message2>keep</Message2> creating{" "}
+            {/* I <Message2>keep</Message2> creating{" "}
             <Message1>new projects</Message1> <br />
             as I <Message2>learn</Message2>, and <Message1>updating</Message1>{" "}
             this portfolio. <br />
             Please come <Message1>check often</Message1>. <br />
-            <Message2>Thank</Message2> you.
+            <Message2>Thank</Message2> you. */}
+            I keep creating <Message2>new projects</Message2> <br />
+            as I learn, and updating this portfolio. <br />
+            <Message1>Please come check often</Message1>. <br />
+            Thank you.
           </LeftHeading>
           <SnsWrapper>
             <Sns href="https://www.linkedin.com/in/ayakoyokoe/" target="_blank">
-              <LinkedInIcon style={{ marginBottom: "-5px" }} />
-              linkedin
+              <LinkedInIcon
+                sx={{
+                  fontSize: { lg: "2.5rem", xl: "3rem" },
+                }}
+              />
+              <LinkedInTitle>linkedin</LinkedInTitle>
             </Sns>
             <Sns
               href="https://github.com/Ayako-Yokoe?tab=repositories"
               target="_blank"
             >
-              <GitHubIcon style={{ marginBottom: "-5px" }} />
-              github
+              <GitHubIcon
+                sx={{
+                  fontSize: { lg: "2.5rem", xl: "3rem" },
+                }}
+              />
+              <GitHubTitle>github</GitHubTitle>
             </Sns>
           </SnsWrapper>
         </Left>
@@ -139,15 +154,12 @@ const Contact = () => {
               Message
               <Textarea label="Message" name="message" required />
             </Label>
-            <SubmitBtn type="submit">
-              <SubmitAnimation></SubmitAnimation>
-              <SubmitText>SEND</SubmitText>
-            </SubmitBtn>
+            <SubmitButton type="submit">Send</SubmitButton>
           </Form>
         </Right>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

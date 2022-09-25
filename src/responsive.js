@@ -4,8 +4,8 @@ const size = {
   m: "768px",
   l: "1024px",
   xl: "1200px",
-  xxl: "1600px",
-};
+  xxl: "1920px",
+}
 const device = {
   xs: `(min-width: ${size.xs})`,
   s: `(min-width: ${size.s})`,
@@ -13,7 +13,7 @@ const device = {
   l: `(min-width: ${size.l})`,
   xl: `(min-width: ${size.xl})`,
   xxl: `(min-width: ${size.xxl})`,
-};
+}
 
-const responsive = { size, device };
-export default responsive;
+const responsive = { size, device }
+export default responsive
