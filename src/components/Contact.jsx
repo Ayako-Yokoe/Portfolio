@@ -27,14 +27,14 @@ import {
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
-const USER_ID = process.env.REACT_APP_USER_ID
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY
 
 const Contact = () => {
   const { ref, inView } = useInView()
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
       (result) => {
         console.log(result.text)
         Swal.fire({
