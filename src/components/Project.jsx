@@ -20,8 +20,6 @@ import {
   ProjectCaption,
   LinkContainer,
   LinkButton,
-  Overlay,
-  OverlayTitle,
   LinkTitle,
 } from "./Project.styles"
 
@@ -127,9 +125,6 @@ const Project = () => {
                 </LinkButton>
               </LinkContainer>
             </Detail>
-            {/* <Overlay>
-              <OverlayTitle>{project.overlay}</OverlayTitle>
-            </Overlay> */}
           </ProjectCard>
         ))}
       </Wrapper>

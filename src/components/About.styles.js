@@ -4,7 +4,6 @@ import responsive from "../responsive"
 export const Container = styled.div`
   height: auto;
   margin: 3rem 1rem;
-  height: 90vh;
 
   @media only screen and ${responsive.device.m} {
     display: flex;
@@ -14,13 +13,12 @@ export const Container = styled.div`
   }
 `
 export const Heading = styled.h2`
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 2rem 0 0.8rem 0;
   text-align: center;
   font-size: 1.3rem;
   letter-spacing: 3px;
-  margin-bottom: 2rem;
-
-  padding: 2rem 0 0.8rem 0;
-  position: relative;
 
   @media only screen and ${responsive.device.m} {
     padding: 2rem 0 1rem 0;
@@ -113,15 +111,15 @@ export const Right = styled.div`
   }
 `
 export const AboutMe = styled.p`
+  margin: 1.3rem 0 1.5rem 0;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 1.4;
-  margin: 1.3rem 0 1.5rem 0;
   line-height: 1.4;
 
   @media only screen and ${responsive.device.s} {
-    font-size: 1rem;
     margin-bottom: 3rem;
+    font-size: 1rem;
   }
   @media only screen and ${responsive.device.l} {
     font-size: 1.2rem;

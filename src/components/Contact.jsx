@@ -22,9 +22,6 @@ import {
   Label,
   Input,
   Textarea,
-  SubmitBtn,
-  SubmitAnimation,
-  SubmitText,
   SubmitButton,
 } from "./Contact.styles"
 
@@ -95,12 +92,6 @@ const Contact = () => {
       <Wrapper>
         <Left>
           <LeftHeading>
-            {/* I <Message2>keep</Message2> creating{" "}
-            <Message1>new projects</Message1> <br />
-            as I <Message2>learn</Message2>, and <Message1>updating</Message1>{" "}
-            this portfolio. <br />
-            Please come <Message1>check often</Message1>. <br />
-            <Message2>Thank</Message2> you. */}
             I keep creating <Message2>new projects</Message2> <br />
             as I learn, and updating this portfolio. <br />
             <Message1>Please come check often</Message1>. <br />

@@ -12,20 +12,14 @@ export const Container = styled.div`
     align-items: center;
     padding: 30px 0;
   }
-  /* @media only screen and ${responsive.device.l} {
-    height: 80vh;
-  }
-  @media only screen and ${responsive.device.xl} {
-    height: 70vh;
-  } */
 `
 export const Heading = styled.h2`
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 2rem 0 0.8rem 0;
   text-align: center;
   font-size: 1.3rem;
   letter-spacing: 3px;
-  margin-bottom: 1.5rem;
-  padding: 2rem 0 0.8rem 0;
-  position: relative;
 
   @media only screen and ${responsive.device.m} {
     padding: 2rem 0 1rem 0;
@@ -60,8 +54,8 @@ export const Heading = styled.h2`
     font-size: 2rem;
   }
   @media only screen and ${responsive.device.xxl} {
-    font-size: 2.6rem;
     margin-bottom: 1.3rem;
+    font-size: 2.6rem;
   }
 `
 export const Title = styled.span`
@@ -85,7 +79,6 @@ export const Title = styled.span`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  //text-align: center;
 
   @media only screen and ${responsive.device.s} {
     flex-direction: row;
@@ -103,19 +96,19 @@ export const Left = styled.div`
   }
 `
 export const LeftHeading = styled.h3`
+  margin: 1rem 1rem 1.5rem 2.5rem;
+  text-align: left;
   font-size: 1rem;
   letter-spacing: 1.5px;
   line-height: 1.5;
-  margin: 1rem 1rem 1.5rem 2.5rem;
-  text-align: left;
 
   @media only screen and ${responsive.device.s} {
     padding-top: 2rem;
     font-size: 1.3rem;
   }
   @media only screen and ${responsive.device.m} {
-    font-size: 1.2rem;
     margin: 0 0 3rem 0;
+    font-size: 1.2rem;
   }
   @media only screen and ${responsive.device.l} {
     font-size: 1.3rem;
@@ -180,7 +173,6 @@ export const GitHubTitle = styled.p`
     font-size: 1.8rem;
   }
 `
-
 export const Right = styled.div`
   margin: 2rem 1rem;
 
@@ -200,9 +192,6 @@ export const Form = styled.form`
   @media only screen and ${responsive.device.m} {
     font-size: 1.1rem;
   }
-  /* @media only screen and ${responsive.device.l} {
-    font-size: 1.2rem;
-  } */
   @media only screen and ${responsive.device.xl} {
     font-size: 1.5rem;
     width: 80%;
@@ -213,30 +202,13 @@ export const Form = styled.form`
 `
 export const Label = styled.label`
   padding-top: 5px;
-
-  /* letter-spacing: 1.5px;
-  @media only screen and ${responsive.device.s} {
-    font-size: 1.3rem;
-  }
-  @media only screen and ${responsive.device.m} {
-    font-size: 1.2rem;
-  }
-  @media only screen and ${responsive.device.l} {
-    font-size: 1.3rem;
-  }
-  @media only screen and ${responsive.device.xl} {
-    font-size: 1.5rem;
-  }
-  @media only screen and ${responsive.device.xxl} {
-    font-size: 2rem;
-  } */
 `
 export const Input = styled.input`
-  padding: 0.5rem;
-  margin: 0.6rem 0;
   width: 100%;
-  font-size: 1.1rem;
+  margin: 0.6rem 0;
+  padding: 0.5rem;
   font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1rem;
   outline: none;
   border-radius: 3px;
   border: 0.5px solid var(--base-color-lighter-1);
@@ -245,17 +217,17 @@ export const Input = styled.input`
     font-size: 1.5rem;
   }
   @media only screen and ${responsive.device.xxl} {
-    font-size: 2rem;
-    padding: 1rem;
     margin: 1rem 0;
+    padding: 1rem;
+    font-size: 2rem;
   }
 `
 export const Textarea = styled.textarea`
-  padding: 0.5rem;
-  margin: 0.6rem 0;
   width: 100%;
-  font-size: 1.1rem;
+  margin: 0.6rem 0;
+  padding: 0.5rem;
   font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1rem;
   outline: none;
   border-radius: 3px;
   border: 0.5px solid var(--base-color-lighter-1);
@@ -265,80 +237,27 @@ export const Textarea = styled.textarea`
     font-size: 1.5rem;
   }
   @media only screen and ${responsive.device.xxl} {
-    font-size: 2rem;
     padding: 1rem;
+    font-size: 2rem;
   }
 `
-// export const SubmitBtn = styled.button`
-//   font-family: "Nunito", sans-serif;
-//   padding: 0.7rem 1.2rem;
-//   margin-top: 1rem;
-//   background-color: transparent;
-//   color: var(--base-color);
-//   font-weight: 500;
-//   letter-spacing: 3px;
-//   border: 1px solid var(--base-color);
-//   overflow: hidden;
-//   position: relative;
-//   cursor: pointer;
-
-//   @media only screen and ${responsive.device.xl} {
-//     font-size: 1rem;
-//     padding: 0.6rem 0.8rem;
-//     margin-top: 0.5rem;
-//   }
-//   @media only screen and ${responsive.device.xxl} {
-//     font-size: 1.3rem;
-//     padding: 0.8rem 1rem;
-//     margin-top: 0.5rem;
-//   }
-
-//   &:hover {
-//     background-color: #fff;
-//     box-shadow: 0 5px 5px rgba(156, 100, 255, 0.5);
-//   }
-// `
-// export const SubmitAnimation = styled.div`
-//   transform: rotate(150deg);
-//   width: 20%;
-//   height: 270%;
-//   left: -100px;
-//   top: -30px;
-//   background-color: #ffe863;
-//   position: absolute;
-//   transition: all 0.5s ease-Out;
-
-//   ${SubmitBtn}:hover & {
-//     left: 100px;
-//   }
-// `
-// export const SubmitText = styled.span`
-//   position: relative;
-//   transition: all 0.45s ease-Out;
-// `
-
-// ==========================
-
 export const SubmitButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 5.5rem;
+  height: 2.6rem;
+  margin-top: 1.6rem;
   font-family: "Nanum Gothic", sans-serif;
-  //font-weight: lighter;
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 3px;
-  cursor: pointer;
-  margin-top: 1.6rem;
-  width: 5.5rem;
-  height: 2.6rem;
-  //background-color: #fff;
-  background-color: var(--base-color);
-  //box-shadow: 5px 5px 0 0 var(--base-color);
-  box-shadow: 1px 1px #fff, 5px 5px var(--yellow);
-  color: #fff;
   border: 1px solid var(--base-color);
-  transition: 0.5s;
+  color: #fff;
+  background-color: var(--base-color);
+  box-shadow: 1px 1px #fff, 5px 5px var(--yellow);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
 
   @media only screen and ${responsive.device.xl} {
     font-size: 1.3rem;

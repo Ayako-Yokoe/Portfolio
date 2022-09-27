@@ -29,8 +29,7 @@ const Header = () => {
           <br />
           to make their lives better.
         </Paragraph>
-
-        <Button to="project">
+        <Button>
           <Bottom></Bottom>
           <Top>
             <Link
@@ -40,7 +39,7 @@ const Header = () => {
               smooth={true}
               duration={500}
             >
-              <Label>projects</Label>
+              <Label>Projects</Label>
             </Link>
             <ButtonBorder>
               <BorderTop></BorderTop>
