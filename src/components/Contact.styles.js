@@ -241,7 +241,7 @@ export const Textarea = styled.textarea`
     font-size: 2rem;
   }
 `
-export const SubmitButton = styled.div`
+export const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
