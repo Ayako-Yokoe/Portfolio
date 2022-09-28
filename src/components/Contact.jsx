@@ -1,7 +1,7 @@
 import React from "react"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
-import emailjs from "emailjs-com"
+import emailjs from "@emailjs/browser"
 import Swal from "sweetalert2"
 import { useInView } from "react-intersection-observer"
 import {
@@ -127,7 +127,7 @@ const Contact = () => {
                 id="form-input-control-name"
                 control={Input}
                 label="Name"
-                name="from_name"
+                name="user_name"
                 required
               />
             </Label>
@@ -137,7 +137,7 @@ const Contact = () => {
                 id="form-input-control-email"
                 control={Input}
                 label="Email"
-                name="reply_to"
+                name="user_email"
                 required
               />
             </Label>
