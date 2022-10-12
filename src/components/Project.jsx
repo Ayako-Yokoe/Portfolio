@@ -105,7 +105,7 @@ const Project = () => {
                         },
                       }}
                     />
-                    <LinkTitle>github</LinkTitle>
+                    <LinkTitle>GitHub</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
                 {/* Maintenance */}

@@ -67,6 +67,7 @@ export const Paragraph = styled.p`
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.4;
+  max-width: 90%;
 
   @media only screen and ${responsive.device.s} {
     font-size: 0.7rem;
@@ -74,16 +75,20 @@ export const Paragraph = styled.p`
   @media only screen and ${responsive.device.m} {
     padding-top: 0.8rem;
     font-size: 1.2rem;
+    max-width: 80%;
   }
   @media only screen and ${responsive.device.l} {
     font-size: 1.3rem;
+    max-width: 65%;
   }
   @media only screen and ${responsive.device.xl} {
     font-size: 1.6rem;
+    max-width: 55%;
   }
   @media only screen and ${responsive.device.xxl} {
     padding-top: 1rem;
     font-size: 2rem;
+    max-width: 54%;
   }
 `
 export const Button = styled.div`

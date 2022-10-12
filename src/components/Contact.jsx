@@ -92,7 +92,7 @@ const Contact = () => {
       <Wrapper>
         <Left>
           <LeftHeading>
-            I keep creating <Message2>new projects</Message2> <br />
+            I keep creating <Message1>new projects</Message1> <br />
             as I learn, and updating this portfolio. <br />
             <Message1>Please come check often</Message1>. <br />
             Thank you.
@@ -104,7 +104,7 @@ const Contact = () => {
                   fontSize: { lg: "2.5rem", xl: "3rem" },
                 }}
               />
-              <LinkedInTitle>linkedin</LinkedInTitle>
+              <LinkedInTitle>LinkedIn</LinkedInTitle>
             </Sns>
             <Sns
               href="https://github.com/Ayako-Yokoe?tab=repositories"
@@ -115,7 +115,7 @@ const Contact = () => {
                   fontSize: { lg: "2.5rem", xl: "3rem" },
                 }}
               />
-              <GitHubTitle>github</GitHubTitle>
+              <GitHubTitle>GitHub</GitHubTitle>
             </Sns>
           </SnsWrapper>
         </Left>

@@ -123,9 +123,6 @@ export const LeftHeading = styled.h3`
 export const Message1 = styled.span`
   color: var(--base-color);
 `
-export const Message2 = styled.span`
-  color: var(--base-color-lighter-2);
-`
 export const SnsWrapper = styled.div`
   display: flex;
   justify-content: space-around;

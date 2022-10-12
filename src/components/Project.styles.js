@@ -14,13 +14,13 @@ export const Container = styled.div`
 `
 export const Heading = styled.h2`
   position: relative;
-  padding: 2rem 0 0.8rem 0;
+  padding: 5rem 0 0.8rem 0;
   text-align: center;
   font-size: 1.3rem;
   letter-spacing: 3px;
 
   @media only screen and ${responsive.device.m} {
-    padding: 2rem 0 1rem 0;
+    padding: 5rem 0 1rem 0;
   }
 
   &::after {
@@ -188,7 +188,7 @@ export const Detail = styled.div`
 
   @media only screen and ${responsive.device.xs} {
     font-size: 0.9rem;
-    padding: 200px 30px 25px 30px;
+    padding: 210px 30px 25px 30px;
   }
   @media only screen and ${responsive.device.s} {
     font-size: 0.9rem;

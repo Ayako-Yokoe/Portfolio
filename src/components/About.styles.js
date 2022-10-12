@@ -112,14 +112,13 @@ export const Right = styled.div`
 `
 export const AboutMe = styled.p`
   margin: 1.3rem 0 1.5rem 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1.4;
   line-height: 1.4;
 
   @media only screen and ${responsive.device.s} {
     margin-bottom: 3rem;
-    font-size: 1rem;
   }
   @media only screen and ${responsive.device.l} {
     font-size: 1.2rem;

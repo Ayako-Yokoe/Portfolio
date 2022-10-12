@@ -24,10 +24,8 @@ const Header = () => {
         <Name>Hi, I'm Ayako Yokoe</Name>
         <Title>Full Stack Developer</Title>
         <Paragraph>
-          I enjoy creating applications, thinking of <br />
-          what apps people would need and how they would use them
-          <br />
-          to make their lives better.
+          I enjoy creating applications, thinking of what apps people would need
+          and how they would use them to make their lives better.
         </Paragraph>
         <Button>
           <Bottom></Bottom>

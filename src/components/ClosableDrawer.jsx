@@ -31,7 +31,7 @@ const ClosableDrawer = (props) => {
                 duration={500}
                 onClick={(event) => props.onClose(event, false)}
               >
-                <ListItemText primary="Home" sx={{ padding: "20px 70px" }} />
+                <ListItemText primary="Home" sx={{ padding: "10px 70px" }} />
               </Link>
             </ListItem>
 
@@ -44,7 +44,7 @@ const ClosableDrawer = (props) => {
                 duration={500}
                 onClick={(event) => props.onClose(event, false)}
               >
-                <ListItemText primary="Project" sx={{ padding: "20px 70px" }} />
+                <ListItemText primary="Project" sx={{ padding: "10px 70px" }} />
               </Link>
             </ListItem>
 
@@ -57,7 +57,7 @@ const ClosableDrawer = (props) => {
                 duration={500}
                 onClick={(event) => props.onClose(event, false)}
               >
-                <ListItemText primary="About" sx={{ padding: "20px 70px" }} />
+                <ListItemText primary="About" sx={{ padding: "10px 70px" }} />
               </Link>
             </ListItem>
 
@@ -70,7 +70,7 @@ const ClosableDrawer = (props) => {
                 duration={500}
                 onClick={(event) => props.onClose(event, false)}
               >
-                <ListItemText primary="Contact" sx={{ padding: "20px 70px" }} />
+                <ListItemText primary="Contact" sx={{ padding: "10px 70px" }} />
               </Link>
             </ListItem>
           </List>
