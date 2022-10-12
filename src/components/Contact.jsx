@@ -12,7 +12,6 @@ import {
   Left,
   LeftHeading,
   Message1,
-  Message2,
   SnsWrapper,
   Sns,
   LinkedInTitle,
