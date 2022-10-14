@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    image: "assets/ecommerce.jpeg",
+    image: "assets/ecommerce.png",
     title: "E-Commerce App: Kids-Clothes",
     caption:
       "E-Commerce Kids-Clothes is a MERN stack application, where admins can add, edit, and delete products based on CRUD operation, and clients can browse and purchase the products utilizing Stripe.",
@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     id: 3,
-    image: "assets/udemy.jpeg",
+    image: "assets/udemy.png",
     title: "Clone Project: Clone-Udemy",
     caption:
       "Clone-Udemy is a clone project that creates a Udemy landing page with React, worked with other group members utilizing GitHub, Slack, and Trello. We learned and handled marge conflicts and issues.",
