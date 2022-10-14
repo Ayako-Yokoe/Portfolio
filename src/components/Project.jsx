@@ -108,11 +108,9 @@ const Project = () => {
                     <LinkTitle>GitHub</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
-                {/* Maintenance */}
-                <LinkButton disabled={true}>
-                  {/* <ProjectLink href={project.deployedLink} target="_blank"> */}
-                  <ProjectLink>
-                    {/* <OpenInNewIcon
+                <LinkButton>
+                  <ProjectLink href={project.deployedLink} target="_blank">
+                    <OpenInNewIcon
                       sx={{
                         fontSize: { lg: "2.5rem", xl: "3.5rem" },
                         margin: { lg: "1.5rem 0 1.5rem 1.5rem" },
@@ -121,15 +119,8 @@ const Project = () => {
                           animationIterationCount: 1,
                         },
                       }}
-                    /> */}
-                    <OpenInNewIcon
-                      sx={{
-                        fontSize: { lg: "2.5rem", xl: "3.5rem" },
-                        margin: { lg: "1.5rem 0 1.5rem 1.5rem" },
-                        color: "#808080",
-                      }}
                     />
-                    <LinkTitle>...maintenance</LinkTitle>
+                    <LinkTitle>Website</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
               </LinkContainer>
