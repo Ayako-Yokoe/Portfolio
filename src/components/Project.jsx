@@ -12,6 +12,7 @@ import {
   SubTitle,
   ProjectLink,
   ProjectCard,
+  ProjectTech,
   ImgContainer,
   Img,
   Detail,
@@ -91,6 +92,7 @@ const Project = () => {
               <Desc>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectCaption>{project.caption}</ProjectCaption>
+                <ProjectTech>TECH STACK: {project.tech}</ProjectTech>
               </Desc>
               <LinkContainer>
                 <LinkButton>

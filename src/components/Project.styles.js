@@ -137,7 +137,7 @@ export const ProjectCard = styled.div`
     height: 321px;
   }
   @media only screen and ${responsive.device.xl} {
-    height: 456px;
+    height: 480px;
     margin-bottom: 8rem;
   }
   @media only screen and ${responsive.device.xxl} {
@@ -209,7 +209,7 @@ export const Detail = styled.div`
     padding-left: 420px;
   }
   @media only screen and ${responsive.device.xl} {
-    height: 456px;
+    height: 480px;
     padding: 1.8rem 2.8rem;
     padding-left: 595px;
   }
@@ -247,16 +247,45 @@ export const Desc = styled.div`
 export const ProjectTitle = styled.h4`
   margin: 1rem 0;
 
+  @media only screen and ${responsive.device.m} {
+    margin: 1rem 0 0.6rem 0;
+  }
   @media only screen and ${responsive.device.xl} {
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
   }
 `
 export const ProjectCaption = styled.p`
   margin: 1rem 0;
   line-height: 1.4;
 
+  @media only screen and ${responsive.device.m} {
+    margin: 0.6rem 0;
+  }
   @media only screen and ${responsive.device.l} {
     line-height: 1.5;
+  }
+  @media only screen and ${responsive.device.xl} {
+    margin: 1.2rem 0;
+  }
+`
+export const ProjectTech = styled.p`
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+  line-height: 1.5;
+  font-weight: bold;
+
+  @media only screen and ${responsive.device.m} {
+    margin-bottom: 2px;
+    font-size: 0.7rem;
+  }
+  @media only screen and ${responsive.device.l} {
+    font-size: 0.85rem;
+  }
+  @media only screen and ${responsive.device.xl} {
+    font-size: 1.2rem;
+  }
+  @media only screen and ${responsive.device.xxl} {
+    font-size: 1.6rem;
   }
 `
 export const LinkContainer = styled.div`
@@ -265,10 +294,13 @@ export const LinkContainer = styled.div`
   justify-content: end;
 
   @media only screen and ${responsive.device.l} {
-    margin: 1.5rem 0;
+    margin: 0.5rem 0;
+  }
+  @media only screen and ${responsive.device.xl} {
+    margin: 0.4rem 0;
   }
   @media only screen and ${responsive.device.xxl} {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
 `
 export const LinkButton = styled.button`
@@ -289,7 +321,7 @@ export const LinkTitle = styled.p`
     font-size: 0.9rem;
   }
   @media only screen and ${responsive.device.xl} {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   @media only screen and ${responsive.device.xxl} {
     font-size: 2rem;
