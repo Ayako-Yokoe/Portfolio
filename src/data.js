@@ -7,7 +7,7 @@ export const projects = [
       "E-Commerce Kids-Clothes is a MERN stack application, where admins can add, edit, and delete products based on CRUD operation, and clients can browse and purchase the products utilizing Stripe.",
     tech: "React, Node.js, Express, MongoDB, Firebase, Styled-Components, MUI, Stripe",
     gitHubLink: "https://github.com/Ayako-Yokoe/E-Commerce_Kids-Clothes",
-    deployedLink: "https://ecommerce-kids-clothes.herokuapp.com/login",
+    deployedLink: "https://kids-clothes.vercel.app/login",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const projects = [
       "Collocation-Dictionary is a react web application utilizing fetching API to search collocations and their usage, along with practice and quiz features for personal learning.",
     tech: "React, Node.js, Express, MongoDB, Styled-Components, MUI, React-quizlet-flashcard",
     gitHubLink: "https://github.com/Ayako-Yokoe/Collocation-Dictionary",
-    deployedLink: "https://collocation-dictionary.herokuapp.com/",
+    deployedLink: "https://collocation-dictionary.vercel.app/",
   },
   {
     id: 3,
