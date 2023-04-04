@@ -1,6 +1,16 @@
 export const projects = [
   {
     id: 1,
+    image: "assets/photo_share.png",
+    title: "Social Media App: Photo_Share",
+    caption:
+      "Photo_Share is a full-stack photo sharing social media app with React, Sanity, and Tailwind CSS. Users can upload photos, save their favorite photos, and comment on photos.",
+    tech: "React, Sanity.io, Tailwind CSS, Google OAuth",
+    gitHubLink: "https://github.com/Ayako-Yokoe/Photo_Share",
+    deployedLink: "https://photo-share-ay.netlify.app/",
+  },
+  {
+    id: 2,
     image: "assets/ecommerce.png",
     title: "E-Commerce App: Kids-Clothes",
     caption:
@@ -10,7 +20,7 @@ export const projects = [
     deployedLink: "https://kids-clothes.vercel.app/login",
   },
   {
-    id: 2,
+    id: 3,
     image: "assets/collocation.jpeg",
     title: "API Project: Collocation Dictionary",
     caption:
@@ -20,7 +30,7 @@ export const projects = [
     deployedLink: "https://collocation-dictionary.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     image: "assets/udemy.png",
     title: "Clone Project: Clone-Udemy",
     caption:
