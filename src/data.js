@@ -1,6 +1,16 @@
 export const projects = [
   {
     id: 1,
+    image: "assets/book-list.jpeg",
+    title: "Task Manager App: Book-List",
+    caption:
+      "The Book_List app, developed with TypeScript, thoroughly explores and maximizes the potential of React Hooks, with a focus on useContext and useReducer. Dive into my blog posts for a comprehensive understanding of these hooks and their implementation in the project.",
+    tech: "React, TypeScript, Tailwind CSS",
+    gitHubLink: "https://github.com/Ayako-Yokoe/book-list",
+    deployedLink: "https://book-list-usecontext-usereducer.netlify.app/",
+  },
+  {
+    id: 2,
     image: "assets/photo_share.png",
     title: "Social Media App: Photo_Share",
     caption:
@@ -10,7 +20,7 @@ export const projects = [
     deployedLink: "https://photo-share-ay.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     image: "assets/ecommerce.png",
     title: "E-Commerce App: Kids-Clothes",
     caption:
@@ -20,7 +30,7 @@ export const projects = [
     deployedLink: "https://kids-clothes.vercel.app/login",
   },
   {
-    id: 3,
+    id: 4,
     image: "assets/collocation.jpeg",
     title: "API Project: Collocation Dictionary",
     caption:
@@ -30,7 +40,7 @@ export const projects = [
     deployedLink: "https://collocation-dictionary.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     image: "assets/udemy.png",
     title: "Clone Project: Clone-Udemy",
     caption:
