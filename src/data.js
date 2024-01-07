@@ -4,7 +4,7 @@ export const projects = [
     image: "assets/book-list.jpeg",
     title: "Task Manager App: Book-List",
     caption:
-      "The Book_List app, developed with TypeScript, thoroughly explores and maximizes the potential of React Hooks, with a focus on useContext and useReducer. Dive into my blog posts for a comprehensive understanding of these hooks and their implementation in the project.",
+      "The Book_List app, developed with TypeScript, thoroughly explores and maximizes the potential of React Hooks, with a focus on useContext and useReducer.",
     tech: "React, TypeScript, Tailwind CSS",
     gitHubLink: "https://github.com/Ayako-Yokoe/book-list",
     deployedLink: "https://book-list-usecontext-usereducer.netlify.app/",
