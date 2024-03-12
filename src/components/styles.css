@@ -1,0 +1,48 @@
+@keyframes swing {
+  10% {
+    transform: translateY(5px);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  65% {
+    transform: translateY(-3px);
+  }
+  85% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+
+  @media (min-width: 1200px) {
+    font-size: 3.5rem;
+  }
+}
+
+.icon:hover {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}
+
+.figma-icon {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+
+  @media (min-width: 1200px) {
+    font-size: 2.5rem;
+  }
+}
+
+.figma-icon:hover {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}

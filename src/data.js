@@ -8,6 +8,8 @@ export const projects = [
     tech: "React, TypeScript, Tailwind CSS",
     gitHubLink: "https://github.com/Ayako-Yokoe/book-list",
     deployedLink: "https://book-list-usecontext-usereducer.netlify.app/",
+    figmaLink:
+      "https://www.figma.com/file/2NgwBsyv3VQ2osXDaZ2tz8/Book-List-App?type=design&node-id=140%3A1171&mode=dev&t=M3szvMA6TS0VFFSn-1",
   },
   {
     id: 2,

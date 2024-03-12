@@ -1,7 +1,6 @@
 import React from "react"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
-import { keyframes } from "@mui/system"
 import { useInView } from "react-intersection-observer"
 import { projects } from "../data"
 import {
@@ -23,27 +22,8 @@ import {
   LinkButton,
   LinkTitle,
 } from "./Project.styles"
-
-const swing = keyframes`
-    10% {
-        transform: translateY(5px);
-    }
-    30% {
-        transform: translateY(-5px);
-    }
-    50% {
-        transform: translateY(3px);
-    }
-    65% {
-        transform: translateY(-3px);
-    }
-    85% {
-        transform: translateY(2px);
-    }
-    100% {
-        transform: translateY(-2px);
-    }
-`
+import { ReactComponent as FigmaIcon } from "../assets/figma-icon.svg"
+import "./styles.css"
 
 const Project = () => {
   const { ref, inView } = useInView()
@@ -97,34 +77,24 @@ const Project = () => {
               <LinkContainer>
                 <LinkButton>
                   <ProjectLink href={project.gitHubLink} target="_blank">
-                    <GitHubIcon
-                      sx={{
-                        fontSize: { lg: "2.5rem", xl: "3.5rem" },
-                        margin: { lg: "1.5rem 0 1.5rem 1.5rem" },
-                        ":hover": {
-                          animation: `${swing} 1s ease`,
-                          animationIterationCount: 1,
-                        },
-                      }}
-                    />
+                    <GitHubIcon className="icon" />
                     <LinkTitle>GitHub</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
                 <LinkButton>
                   <ProjectLink href={project.deployedLink} target="_blank">
-                    <OpenInNewIcon
-                      sx={{
-                        fontSize: { lg: "2.5rem", xl: "3.5rem" },
-                        margin: { lg: "1.5rem 0 1.5rem 1.5rem" },
-                        ":hover": {
-                          animation: `${swing} 1s ease`,
-                          animationIterationCount: 1,
-                        },
-                      }}
-                    />
+                    <OpenInNewIcon className="icon" />
                     <LinkTitle>Website</LinkTitle>
                   </ProjectLink>
                 </LinkButton>
+                {project.figmaLink && (
+                  <LinkButton>
+                    <ProjectLink href={project.figmaLink} target="_blank">
+                      <FigmaIcon className="figma-icon" />
+                      <LinkTitle>Figma</LinkTitle>
+                    </ProjectLink>
+                  </LinkButton>
+                )}
               </LinkContainer>
             </Detail>
           </ProjectCard>
